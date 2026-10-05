@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+.DS_Store
+
+# Runtime-generated calibration artifacts
+gaime_auto_calibration.json
+gaime_auto_packets.txt
+gaime_auto_packets.previous.txt
+gaime_last_calibration_status.txt
+gaime-calibration-profiles/

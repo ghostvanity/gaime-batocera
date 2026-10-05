@@ -1,0 +1,18 @@
+# G'AIM'E Batocera configuration
+#
+# Player assignment uses the physical Linux USB topology name, e.g. 1-2.
+# Run scripts/configure-players.sh on Batocera with the guns connected to
+# populate these automatically.
+P1_USB_PORT=
+P2_USB_PORT=
+
+# Calibration display. Leave all blank to use the primary xrandr output.
+# DISPLAY_OUTPUT can be set to a connector name such as DP-3 or HDMI-1.
+DISPLAY_OUTPUT=
+DISPLAY_X=
+DISPLAY_Y=
+DISPLAY_WIDTH=
+DISPLAY_HEIGHT=
+
+# Leave blank for automatic thickness (~3.6% of display height).
+BORDER_THICKNESS=

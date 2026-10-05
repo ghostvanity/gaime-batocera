@@ -1,0 +1,40 @@
+#!/bin/bash
+
+WATCHDOG="/userdata/system/gaime_watchdog.sh"
+PIDFILE="/tmp/gaime_watchdog.pid"
+
+case "$1" in
+    start)
+        if [ -f "$PIDFILE" ]; then
+            oldpid="$(cat "$PIDFILE")"
+            if kill -0 "$oldpid" 2>/dev/null; then
+                exit 0
+            fi
+            rm -f "$PIDFILE"
+        fi
+        nohup "$WATCHDOG" >/dev/null 2>&1 &
+        echo $! > "$PIDFILE"
+        ;;
+
+    stop)
+        if [ -f "$PIDFILE" ]; then
+            pid="$(cat "$PIDFILE")"
+            kill "$pid" 2>/dev/null
+            wait "$pid" 2>/dev/null
+            rm -f "$PIDFILE"
+        fi
+        ;;
+
+    restart)
+        "$0" stop
+        sleep 1
+        "$0" start
+        ;;
+
+    *)
+        echo "Usage: $0 {start|stop|restart}" >&2
+        exit 1
+        ;;
+esac
+
+exit 0
