@@ -163,11 +163,13 @@ bash -n scripts/install.sh
 
 ## Credits / reverse-engineering context
 
-Public G'AIM'E reverse-engineering by Matt Kanwisher was useful background during the investigation:
+Special thanks to [Matt Kanwisher](https://github.com/mattkanwisher) for his public G'AIM'E reverse-engineering work and documentation:
 
-- https://github.com/mattkanwisher/gaime_mods
+- [mattkanwisher/gaime_mods](https://github.com/mattkanwisher/gaime_mods)
 
-This repository does not vendor files from that project. If code from another project is copied in the future, verify and comply with that project's license first.
+His research was useful background while investigating the G'AIM'E hardware and protocol.
+
+This project does not vendor files from `gaime_mods`.
 
 ## Batocera upstreaming
 
